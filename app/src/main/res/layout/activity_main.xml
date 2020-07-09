@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <TabHost
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabhost"
+        >
+        <TabWidget
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs"
+            >
+
+        </TabWidget>
+
+        <!-- android:layout_height="fill_parent"-->
+        <FrameLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@android:id/tabcontent"
+            >
+            <!-- CONTROLES DEL PRIMER TAB -->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="200px"
+                android:id="@+id/tab1"
+                >
+
+
+                <Button
+                    android:id="@+id/pase_lista"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="PASE DE LISTA" />
+
+                <EditText
+                    android:id="@+id/etBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusable="false"/>
+
+                <Button
+                    android:id="@+id/buttonAdministrarGrupo"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="ADMINISTRAR GRUPOS" />
+
+
+                <Button
+                    android:id="@+id/button_hoy"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="HOY!!"
+                    android:enabled="false" />
+                <Button
+                    android:id="@+id/button_salir_aplicacion"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="SALIDA" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView"
+                        android:src="@mipmap/ic_launcher" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:text="Desarrollado por Emanuel Galvan Díaz y Oscar Flores Gallegos"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical|center_horizontal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- CONTROLES DEL SEGUNDO TAB -->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="200px"
+                android:id="@+id/tab2"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Grupos: "
+                    android:background="#ffff855a" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:id="@+id/spinner1" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Grupo: "
+                        android:id="@+id/textViewT4_0"
+                        android:background="#ffff855a" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/textViewT4_1"
+                        android:background="#ffff855a" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Nombre: "
+                        android:id="@+id/textViewT4_2"
+                        android:background="#ffff855a" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/textViewT4_3"
+                        android:background="#ffff855a" />
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="Crear Grupo Vacío"
+                    android:id="@+id/grupo_vacio" />
+
+                <Button
+                    android:id="@+id/grupo_arch"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="Crear Grupo de Archivo" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:text="Agregar Alumno"
+                    android:id="@+id/agregar_alumno"
+                    android:layout_gravity="center_horizontal" />
+
+
+
+
+
+            </LinearLayout>
+
+            <!-- CONTROLES DEL TERCER TAB -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="200px"
+                android:id="@+id/tab3"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Alumnos Registrados"
+                    android:id="@+id/textView03"
+                    android:background="#ff83ff7b" />
+
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:id="@+id/spinner2" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="ID:"
+                        android:id="@+id/textViewT4_4"
+                        android:background="#ff5aff85" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/textViewT4_5"
+                        android:background="#ff5aff85" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Estudiante:"
+                        android:id="@+id/textViewT4_6"
+                        android:background="#ff5aff85" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/textViewT4_7"
+                        android:background="#ff5aff85" />
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+            </LinearLayout>
+
+
+
+            <!-- CONTROLES DEL CUARTO TAB -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="200px"
+                android:id="@+id/tab4"
+                >
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:id="@+id/spinner3" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Datos del Grupo a Analizar"
+                        android:gravity="center" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Id Grupo: "
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/id_Grupo_PestanaAnalisis"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Nombre: "
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text=""
+                            android:id="@+id/Nombre_Grupo_PestanaAnalisis" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Resumen del Grupo:"
+                        />
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/pastelChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </TabHost>
+</ScrollView>
